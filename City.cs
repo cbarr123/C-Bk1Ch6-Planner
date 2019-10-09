@@ -16,13 +16,5 @@ namespace Planner
             _yearEstablished = year;
             Buildings = new List<Building>();
         }
-
-
-
-    
-
-
-
-
     }
 }

@@ -46,10 +46,9 @@ namespace Planner
             Console.WriteLine($"Constructed on {this._dateConstructed}");
             Console.WriteLine($"Owned by {this._owner}");
             Console.WriteLine($"{this.Volume} cubic meters of space");
+            Console.WriteLine();
             
 
         }
-
-
     }
 }

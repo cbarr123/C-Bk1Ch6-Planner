@@ -6,8 +6,6 @@ namespace Planner
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
             //Create a new city: megalopolis
             City Megalopolis = new City("Megalopolis", 2019);
             //Define the mayor
@@ -25,6 +23,7 @@ namespace Planner
             FiveOneTwoEight.Construct();
             //Have business people in your city purchase each of your buildings
             FiveOneTwoEight.Purchase("John Vanderbilt");
+            Megalopolis.Buildings.Add(FiveOneTwoEight);
 
 
             //Building 2
@@ -39,6 +38,7 @@ namespace Planner
             OneTwoNine.Construct();
             //Have business people in your city purchase each of your buildings
             OneTwoNine.Purchase("Tony Roger");
+            Megalopolis.Buildings.Add(OneTwoNine);
         
             foreach (Building building in Megalopolis.Buildings)
             {
