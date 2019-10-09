@@ -7,6 +7,12 @@ namespace Planner
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+            //Create a new city: megalopolis
+            City Megalopolis = new City("Megalopolis", 2019);
+            //Define the mayor
+            Megalopolis.mayor = "The Mayor";
+
             //Building 1
             Building FiveOneTwoEight = new Building("512 8th Avenue");
             //Give each building a width, height, and number of stories.
@@ -19,6 +25,26 @@ namespace Planner
             FiveOneTwoEight.Construct();
             //Have business people in your city purchase each of your buildings
             FiveOneTwoEight.Purchase("John Vanderbilt");
+
+
+            //Building 2
+            Building OneTwoNine = new Building("129 10th Avenue");
+            //Give each building a width, height, and number of stories.
+            Console.WriteLine(OneTwoNine);
+            OneTwoNine.Stories = 20;
+            OneTwoNine.Width = 40;
+            OneTwoNine.Depth = 40;
+            Double OneTwoNineVolume = OneTwoNine.Volume;
+            //Construct each building
+            OneTwoNine.Construct();
+            //Have business people in your city purchase each of your buildings
+            OneTwoNine.Purchase("Tony Roger");
+        
+            foreach (Building building in Megalopolis.Buildings)
+            {
+                building.Print();
+            }
+        
         }
     }
 }
